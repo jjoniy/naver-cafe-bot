@@ -1,0 +1,27 @@
+YAML
+name: Naver Cafe Bot
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # 10분마다 주기적으로 실행
+  workflow_dispatch:  # 수동으로도 즉시 실행 가능
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run bot script
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python bot.py
