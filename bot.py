@@ -8,8 +8,8 @@ def send_discord_notification():
     # 네이버 오픈 API 또는 크롤링 로직 수행
     url = "https://openapi.naver.com/v1/search/cafearticle.json?query=공지사항 & 정보 소개&display=1"
     headers = {
-        "X-Naver-Client-Id": "YOUR_CLIENT_ID",
-        "X-Naver-Client-Secret": "YOUR_CLIENT_SECRET"
+        "X-Naver-Client-Id": "mJdNXCs5Wz5tvav0AiUO",
+        "X-Naver-Client-Secret": "meNyYrEmDx"
     }
     
     response = requests.get(url, headers=headers)
