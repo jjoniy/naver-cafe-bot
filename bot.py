@@ -7,7 +7,7 @@ def send_discord_notification():
 
     url = "https://openapi.naver.com/v1/search/cafearticle.json?query=공지사항&display=1"
     headers = {
-        "X-Naver-Client-Id": "mJdNXCs5Wz5tVav0AiU0",
+        "X-Naver-Client-Id": "mJdNXCs5Wz5tvav0AiUO",
         "X-Naver-Client-Secret": "meNyYrEmDx"
     }
 
